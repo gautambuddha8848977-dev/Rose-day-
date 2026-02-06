@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day 🌹</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #f7eefc, #ffffff);
+  color: #4a2f5a;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 80px 24px;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+}
+
+.content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+/* subtle rose divider */
+.divider {
+  font-size: 26px;
+  margin: 40px 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Opening -->
+<section class="section">
+  <div class="content">
+    <h1>
+      Simran, this rose isn’t meant to impress the world.<br>
+      It opens slowly — the way my love learned to open for you.
+    </h1>
+  </div>
+</section>
+
+<!-- Paragraph 1 -->
+<section class="section">
+  <div class="content">
+    <p>
+      On Rose Day, people give flowers that fade with time.
+      But when I thought of you, I realized I didn’t want to give something temporary.
+      I wanted to give you words that stay, feelings that grow, and love that deepens quietly —
+      day after day, just like us.
+    </p>
+  </div>
+</section>
+
+<!-- Paragraph 2 -->
+<section class="section">
+  <div class="content">
+    <p>
+      Every moment with you has softened my life in ways I never knew I needed.
+      You didn’t change who I am — you made me more myself.
+      With you, even silence feels warm, and even distance feels gentle.
+    </p>
+  </div>
+</section>
+
+<!-- Paragraph 3 -->
+<section class="section">
+  <div class="content">
+    <p>
+      This rose carries everything I don’t always know how to say out loud.
+      It holds my gratitude for you, my respect for you,
+      and my promise to keep choosing you —
+      even on ordinary days, even when life isn’t perfect.
+    </p>
+  </div>
+</section>
+
+<!-- Paragraph 4 -->
+<section class="section">
+  <div class="content">
+    <p>
+      I don’t need grand gestures to love you.
+      I just need you — your presence, your honesty, your heart beside mine.
+      That’s why this rose isn’t just a gift… it’s a reminder.
+    </p>
+  </div>
+</section>
+
+<!-- Closing -->
+<section class="section">
+  <div class="content">
+    <div class="divider">🌹</div>
+    <h1>
+      Happy Rose Day, my wife.<br>
+      You will always be my forever rose.
+    </h1>
+  </div>
+</section>
+
+<script>
+// fade-in on scroll
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+document.querySelectorAll(".content").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
